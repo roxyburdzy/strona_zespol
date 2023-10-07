@@ -17,10 +17,31 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<div class="navbar">
+			<div style="background-color:white;
+				height:100%;
+				width:100px;">
+			  <img class="navbar_logo" src="logo.jpg"/>
+			</div>
+			<div
+			  style="background-color:white;
+				height:100%;
+				width:300px;
+				display:flex;
+				justify-content:space-evenly;"
+			>
+			
+			  <a class="navbar_button" href="/about/">About<a>
+			  <a class="navbar_button" href="/contact/">Contact </a>
+			  <a class="navbar_button">Gallery</a>
+			</div>
+		  </div>
 		<slot />
+		<footer class="footer "><div class="footer_content"></div>&copy; created by Roxy, 2023;</footer>
 	</body>
 </html>
 <style is:global>
+
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -32,10 +53,15 @@ const { title } = Astro.props;
 			white 60%
 		);
 	}
+	  
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
+	}
+	body{
+		height: 100vh;
+		margin: 0;
 	}
 	code {
 		font-family:
@@ -48,4 +74,31 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+	.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border: solid red 1px;
+    display: flex;
+    justify-content: space-between;}
+	.navbar_button {
+    font-size: 30px;
+  }
+  .main_photo {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .footer
+  {
+	style;background-color:white;
+	text-align: center;
+  }
+  .navbar_logo
+  {
+	height: 100%;
+  }
+
+
 </style>
