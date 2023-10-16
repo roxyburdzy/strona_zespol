@@ -1,5 +1,5 @@
 ---
-import "@fontsource/great-vibes";
+import '@fontsource/great-vibes';
 interface Props {
   title: string;
 }
@@ -8,34 +8,29 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
-    <div class="navbar">
-      <div
-        class="navbar_logo"
-        style="background-color:white;
-				height:100%;
-				width:100px;"
-      >
-        <img class="navbar_logo_image" src="logo9.jpeg" />
+    <div class='navbar'>
+      <div class='navbar_logo' height:100%; width:100px;'>
+        <img class='navbar_logo_image' src='logo.png' />
       </div>
-      <div class="navbar_buttons">
-        <a class="navbar_button" href="/about/">About</a>
-        <a class="navbar_button" href="/contact/">Contact</a>
-        <a class="navbar_button">Gallery</a>
+      <div class='navbar_buttons'>
+        <a class='navbar_button' href='/about/'>About</a>
+        <a class='navbar_button' href='/contact/'>Contact</a>
+        <a class='navbar_button'>Gallery</a>
       </div>
     </div>
     <slot />
-    <footer class="footer">
-      <div class="footer_content"></div>&copy; created by Roxy, 2023;
+    <footer class='footer'>
+      <div class='footer_content'></div>&copy; created by Roxy, 2023;
     </footer>
 
     <style is:global>
@@ -53,7 +48,7 @@ const { title } = Astro.props;
 
       html {
         font-family: system-ui, sans-serif;
-        background: #13151a;
+        background: #000;
         background-size: 224px;
       }
       body {
@@ -87,8 +82,11 @@ const { title } = Astro.props;
         margin-bottom: 1rem;
       }
       .footer {
-        background-color: white;
+        color: white;
         text-align: center;
+      }
+      .navbar_logo {
+        padding: 0.2rem;
       }
       .navbar_logo_image {
         height: 100%;
