@@ -19,13 +19,8 @@ const { title } = Astro.props;
   </head>
   <body>
     <div class="navbar">
-      <div
-        class="navbar_logo"
-        style="background-color:white;
-				height:100%;
-				width:100px;"
-      >
-        <img class="navbar_logo_image" src="logo9.jpeg" />
+      <div class="navbar_logo" height:100%; width:100px;'>
+        <img class="navbar_logo_image" src="logo.png" />
       </div>
       <div class="navbar_buttons">
         <a class="navbar_button" href="/about">About</a>
@@ -53,7 +48,7 @@ const { title } = Astro.props;
 
       html {
         font-family: system-ui, sans-serif;
-        background: #13151a;
+        background: #000;
         background-size: 224px;
       }
       body {
@@ -87,8 +82,11 @@ const { title } = Astro.props;
         margin-bottom: 1rem;
       }
       .footer {
-        background-color: white;
+        color: white;
         text-align: center;
+      }
+      .navbar_logo {
+        padding: 0.2rem;
       }
       .navbar_logo_image {
         height: 100%;
