@@ -12,7 +12,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -28,7 +28,7 @@ const { title } = Astro.props;
         <img class="navbar_logo_image" src="logo9.jpeg" />
       </div>
       <div class="navbar_buttons">
-        <a class="navbar_button" href="/about/">About</a>
+        <a class="navbar_button" href="/about">About</a>
         <a class="navbar_button" href="/contact/">Contact</a>
         <a class="navbar_button">Gallery</a>
       </div>
