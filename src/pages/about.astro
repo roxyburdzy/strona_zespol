@@ -20,21 +20,8 @@ import "@fontsource/great-vibes";
       to, co sprawia, że rzeczy są naprawdę piękne - ich zdolność do wywołania
       emocji i refleksji. Muzyka może budować mosty między ludźmi, zrozumienie i
       tolerancję. To, co sprawia, że muzyka jest dobra, to jej zdolność do
-      wpływania na nasze serca i umysły.
-    </p>
-    <br />
-    <p>
-      Kwartet smyczkowy jest idealnym wyborem na różnego rodzaju uroczystości,
-      dzięki swojemu wyjątkowemu brzmieniu i wszechstronności repertuaru. Dzięki
-      zdolności do interpretowania różnych gatunków muzycznych, od klasycznej
-      muzyki kompozytorów takich jak Mozart i Bach, po współczesne przeboje czy
-      muzykę filmową, nasz zespół potrafi dostosować się do każdej okazji i
-      gustu publiczności. Stworzy wyjątkową atmosferę na ważnych wydarzeniach,
-      takich jak śluby, bankiety, jubileusze czy wystawy. Kwartet smyczkowy to
-      nie tylko doskonała oprawa muzyczna, ale także symbol elegancji i
-      profesjonalizmu, który dodaje uroku każdej uroczystości. Jego harmoniczne
-      dźwięki i umiejętność wywoływania emocji uczynią każde wydarzenie
-      niezapomnianym, wyjątkowym i pełnym magii muzyki.
+      wpływania na nasze serca i umysły. To jest to wszystko czym chcemy się
+      podzielić z Tobą i Twoimi najbiszymi.
     </p>
   </main>
 </Layout>
@@ -48,12 +35,20 @@ import "@fontsource/great-vibes";
     color: white;
     font-size: 20px;
     line-height: 1.6;
-    background-image: url("grass_background.jpeg");
+    position: relative;
+    display: block;
   }
-  /* img {
-    opposity: 0.5;
-    width: 100%;
-  }*/
+  main::after {
+    background-image: url("grass_background.jpeg");
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    z-index: -1;
+  }
 
   h1 {
     font-size: 6rem;
@@ -67,7 +62,7 @@ import "@fontsource/great-vibes";
   }
   p {
     font-family: "Great Vibes";
-    font-size: 32px;
+    font-size: 30px;
     color: black;
   }
 </style>
