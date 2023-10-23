@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "@fontsource/great-vibes";
+---
+
+<Layout title="Oferta">
+  <main>
+    <h1>Nasza oferta na uroczystości</h1>
+    <p>
+      Kwartet smyczkowy jest idealnym wyborem na różnego rodzaju uroczystości,
+      dzięki swojemu wyjątkowemu brzmieniu i wszechstronności repertuaru. Dzięki
+      zdolności do interpretowania różnych gatunków muzycznych, od klasycznej
+      muzyki kompozytorów takich jak Mozart i Bach, po współczesne przeboje czy
+      muzykę filmową, nasz zespół potrafi dostosować się do każdej okazji i
+      gustu publiczności. Stworzy wyjątkową atmosferę na ważnych wydarzeniach,
+      takich jak śluby, bankiety, jubileusze czy wystawy. Kwartet smyczkowy to
+      nie tylko doskonała oprawa muzyczna, ale także symbol elegancji i
+      profesjonalizmu, który dodaje uroku każdej uroczystości. Jego harmoniczne
+      dźwięki i umiejętność wywoływania emocji uczynią każde wydarzenie
+      niezapomnianym, wyjątkowym i pełnym magii muzyki.
+    </p>
+    <br />
+    <p>Gramy na:</p>
+    <ul>
+      <li>Ślubach(kościelny, cywilny, humanistyczny)</li>
+      <li>Uroczystych obiadach</li>
+      <li>Rocznicach</li>
+      <li>Jubileszach</li>
+      <li>Urodzinach</li>
+      <li>Podczas pierwszego tańca</li>
+      <li>W trakcie eventów firmowych</li>
+    </ul>
+    <a href="oferta.astro"> <button>Przykładowe utwory</button></a>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 3rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    position: relative;
+    display: block;
+  }
+  main::after {
+    background-image: url("background_oferta.jpeg");
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Great Vibes";
+
+    text-align: center;
+
+    color: black;
+  }
+  p {
+    font-family: "Great Vibes";
+    font-size: 32px;
+    color: black;
+  }
+  ul {
+    font-family: "Great Vibes";
+    font-size: 28px;
+    color: black;
+  }
+  ol {
+    color: white;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  button {
+    background-color: rgb(235, 228, 170);
+    color: black;
+    text-align: center;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+</style>

@@ -1,30 +1,66 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import "@fontsource/great-vibes";
 ---
 
 <Layout title="contact">
   <main>
-    <h2>Kontakt</h2>
-    <p>Jelenia Góra tel. 883096943 zespółastrogra@gmail.com</p>
-  </main>
+    <h1>Kontakt</h1>
 
+    <dl>
+      <dt>Jelenia Góra</dt>
+     <dt>tel. 883096943<br />tel.696035499</dt>
+      <dt>harmonyquartet.art@gamil.com</dt>
+      <dt>Fb kontakt</dt>
+    </dl>
+  </main>
   <style>
     main {
       margin: auto;
-      padding: 1rem;
+      padding: 3rem;
       width: 800px;
       max-width: calc(100% - 2rem);
       color: white;
       font-size: 20px;
       line-height: 1.6;
+      position: relative;
+      display: block;
+      height: 80vh;
     }
-
-    h1 {
-      font-size: 4rem;
+    main::after {
+      background-image: url("background_contact.jpeg");
+        opacity:
+        0.9;
+        top:
+        0;
+        left:
+        0;
+        bottom:
+        0;
+        right:
+        0;
+        position:
+        absolute;
+        content:
+        "";
+        z-index:
+        -1;
+        }
+        h1
+        {font-size: 4rem;
       font-weight: 700;
+      font-family: "Great Vibes";
       line-height: 1;
       text-align: center;
       margin-bottom: 1rem;
-    }
-  </style>
+      color: black;}
+        dl
+        {text-align: center;
+      color: black;}
+        <
+        style
+      >
+      </a>
+    </dl>
+  </main>
 </Layout>
