@@ -1,9 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "@fontsource/great-vibes";
+import Layout from '../layouts/Layout.astro';
+import '@fontsource/great-vibes';
 ---
 
-<Layout title="About">
+<Layout title='About'>
   <main>
     <h1>Piękno tkwi w harmonii</h1>
     <p>
@@ -28,40 +28,46 @@ import "@fontsource/great-vibes";
 
 <style>
   main {
-    margin: auto;
-    padding: 3rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
+    margin-top: 60px;
+    padding-top: 60px;
+    width: 100vw;
     color: white;
     font-size: 20px;
     line-height: 1.6;
     position: relative;
     display: block;
+    padding: 2rem;
   }
   main::after {
-    background-image: url("grass_background.jpeg");
+    background-image: linear-gradient(
+        to bottom,
+        rgba(155, 155, 155, 0.4),
+        rgba(255, 255, 255, 0.4)
+      ),
+      url('grass_background.jpeg');
+    background-size: cover;
     opacity: 0.9;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
-    content: "";
+    content: '';
     z-index: -1;
   }
 
   h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 700;
     font-style: italic;
-    font-family: "Great Vibes";
+    font-family: 'Great Vibes';
 
     text-align: center;
 
     color: black;
   }
   p {
-    font-family: "Great Vibes";
+    font-family: 'Great Vibes';
     font-size: 30px;
     color: black;
   }

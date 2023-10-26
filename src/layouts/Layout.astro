@@ -1,5 +1,5 @@
 ---
-import "@fontsource/great-vibes";
+import '@fontsource/great-vibes';
 interface Props {
   title: string;
 }
@@ -8,33 +8,35 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width,initial-scale=1.0' />
 
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name='generator' content={Astro.generator} />
+    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
     <title>{title}</title>
   </head>
   <body>
-    <div class="navbar">
-      <div class="navbar_logo" height:100%; width:100px;'>
-        <a href="/">
-          <img class="navbar_logo_image" src="logo.png" />
+    <div class='navbar'>
+      <div class='navbar_logo' height:100%; width:100px;'>
+        <a href='/'>
+          <img class='navbar_logo_image' src='logo.png' />
         </a>
       </div>
 
-      <div class="navbar_buttons">
-        <a class="navbar_button" href="/about">O nas</a>
-        <a class="navbar_button" href="/contact">Kontakt</a>
-        <a class="navbar_button" href="/oferta">Oferta</a>
+      <div class='navbar_buttons'>
+        <a class='navbar_button' href='/about'>O nas</a>
+        <a class='navbar_button' href='/contact'>Kontakt</a>
+        <a class='navbar_button' href='/oferta'>Oferta</a>
       </div>
     </div>
     <slot />
-    <footer class="footer">
-      <div class="footer_content"></div>&copy; created by Roxy, 2023;
+    <footer class='footer'>
+      <div class='footer_content'></div>&copy; created with ❤️ by <a
+        href='https://github.com/roxyburdzy'>Roxy</a
+      >, 2023;
     </footer>
 
     <style is:global>
@@ -50,10 +52,15 @@ const { title } = Astro.props;
         );
       }
 
+      * {
+        box-sizing: border-box;
+      }
+
       html {
         font-family: system-ui, sans-serif;
         background: #000;
         background-size: 224px;
+        box-sizing: border-box;
       }
       body {
         height: 100vh;
@@ -70,6 +77,7 @@ const { title } = Astro.props;
           Courier New,
           monospace;
       }
+
       .navbar {
         position: fixed;
         top: 0;
@@ -87,6 +95,8 @@ const { title } = Astro.props;
         margin-bottom: 1rem;
       }
       .footer {
+        width: 100%;
+        padding: 30px 0;
         color: white;
         text-align: center;
       }
@@ -108,7 +118,7 @@ const { title } = Astro.props;
         color: white;
         line-height: 60px;
         margin: 0 15px;
-        font-family: "Great Vibes";
+        font-family: 'Great Vibes';
       }
     </style>
   </body>
