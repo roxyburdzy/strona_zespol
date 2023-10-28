@@ -1,44 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "@fontsource/great-vibes";
+import HeroImage from "../layouts/HeroImage.astro";
 ---
 
 <Layout title="Homepage.">
   <main>
-    <div class="hero">
-      <h1 class="hero_title">Harmony Quartet</h1>
-      <img class="main_photo" src="main_photo.jpg" alt="Zespół Astro" />
-    </div>
+    <HeroImage
+      src="main_photo.jpg"
+      alt="Zespół Astro"
+      title="Harmony Quartet"
+    />
   </main>
 </Layout>
 
 <style>
   main {
     width: 100%;
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
+    color: rgb(254, 241, 223);
     z-index: 10;
     position: relative;
-  }
-
-  .hero_title {
-    font-size: 10vw;
-    font-weight: 600;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    text-shadow: 5px 5px 10px black;
-    letter-spacing: 3px;
-    opacity: 0.8;
-  }
-  .hero {
-    width: 100%;
-    margin-top: 60px;
   }
 </style>

@@ -1,12 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "@fontsource/great-vibes";
+import HeroImage from "../layouts/HeroImage.astro";
+import Text from "../layouts/Text.astro";
 ---
 
 <Layout title="About">
   <main>
-    <h1>Piękno tkwi w harmonii</h1>
-    <p>
+    <HeroImage
+      src="grass_background.jpeg"
+      alt="trawa"
+      title="Piękno tkwi w harmonii"
+    />
+
+    <Text>
       Muzyka jest jednym z najpiękniejszych wyrazów sztuki, zdolnym do wywołania
       głębokich emocji i wyrażenia nieopisanego piękna. Jednak harmonia w muzyce
       to nie tylko kwestia dźwięków, ale także symboliczna metafora. W muzyce
@@ -22,49 +29,18 @@ import "@fontsource/great-vibes";
       tolerancję. To, co sprawia, że muzyka jest dobra, to jej zdolność do
       wpływania na nasze serca i umysły. To jest to wszystko czym chcemy się
       podzielić z Tobą i Twoimi najbiszymi.
-    </p>
+    </Text>
   </main>
 </Layout>
 
 <style>
   main {
-    margin-top: 60px;
     padding-top: 60px;
     width: 100vw;
-    color: white;
-    font-size: 20px;
+    color: rgb(254, 241, 223);
     line-height: 1.6;
     position: relative;
     display: block;
     padding: 2rem;
-  }
-  main::after {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(155, 155, 155, 0.4),
-        rgba(255, 255, 255, 0.4)
-      ),
-      url("grass_background.jpeg");
-    background-size: cover;
-    opacity: 0.9;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    content: "";
-    z-index: -1;
-  }
-
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    font-style: italic;
-    text-align: center;
-    color: black;
-  }
-  p {
-    font-size: 30px;
-    color: black;
   }
 </style>
