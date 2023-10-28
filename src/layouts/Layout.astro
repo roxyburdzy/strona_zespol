@@ -28,8 +28,8 @@ const { title } = Astro.props;
 
       <div class="navbar_buttons">
         <a class="navbar_button" href="/about">O nas</a>
-        <a class="navbar_button" href="/contact">Kontakt</a>
         <a class="navbar_button" href="/oferta">Oferta</a>
+        <a class="navbar_button" href="/contact">Kontakt</a>
       </div>
     </div>
     <slot />
@@ -61,10 +61,15 @@ const { title } = Astro.props;
         background: #000;
         background-size: 224px;
         box-sizing: border-box;
+        font-size: 16px;
+        @media only screen and (max-width: 600px) {
+          font-size: 8px;
+        }
       }
       body {
         height: 100vh;
         margin: 0;
+        color: rgb(254, 241, 223);
       }
       code {
         font-family:
@@ -89,6 +94,7 @@ const { title } = Astro.props;
         justify-content: space-between;
         background-color: black;
         z-index: 100;
+        padding: 0 1rem;
       }
 
       .main_photo {
@@ -113,7 +119,7 @@ const { title } = Astro.props;
         justify-content: space-evenly;
       }
       .navbar_button {
-        font-size: 40px;
+        font-size: 2.5rem;
         z-index: 11;
         color: white;
         line-height: 60px;

@@ -1,12 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "@fontsource/great-vibes";
+import HeroImage from "../layouts/HeroImage.astro";
+import Text from "../layouts/Text.astro";
 ---
 
 <Layout title="Oferta">
+
+  
   <main>
-    <h1>Nasza oferta na uroczystości</h1>
-    <p>
+    <HeroImage
+  src="background_oferta.jpeg"
+  alt="rosa"
+  title="Nasza oferta na uroczystości"
+  />
+    
+    <Text>
       Kwartet smyczkowy jest idealnym wyborem na różnego rodzaju uroczystości,
       dzięki swojemu wyjątkowemu brzmieniu i wszechstronności repertuaru. Dzięki
       zdolności do interpretowania różnych gatunków muzycznych, od klasycznej
@@ -18,9 +27,9 @@ import "@fontsource/great-vibes";
       profesjonalizmu, który dodaje uroku każdej uroczystości. Jego harmoniczne
       dźwięki i umiejętność wywoływania emocji uczynią każde wydarzenie
       niezapomnianym, wyjątkowym i pełnym magii muzyki.
-    </p>
+    </Text>
     <br />
-    <p>Nasze propozycje na rózne okazje:</p>
+    <Text>Nasze propozycje na rózne okazje:</Text>
     <ul>
       <li>Ślubach(kościelny, cywilny, humanistyczny)</li>
       <li>Uroczystych obiadach</li>
@@ -35,61 +44,25 @@ import "@fontsource/great-vibes";
 
 <style>
   main {
-    margin-top: 60px;
-    padding: 3rem;
-    padding-top: 60px;
+  
+    
     width: 100vw;
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
+    color: rgb(254, 241, 223);
+    font-size: 1.25rem;
     position: relative;
     display: block;
   }
-  main::after {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(155, 155, 155, 0.6),
-        rgba(255, 255, 255, 0.6)
-      ),
-      url("background_oferta.jpeg");
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    content: "";
-    z-index: -1;
-    background-size: cover;
-  }
+  
 
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    font-style: italic;
-    text-align: center;
-    color: black;
-  }
-  p {
-    font-size: 32px;
-    color: black;
-  }
+
+  
   ul {
-    font-size: 28px;
-    color: black;
+    font-size: 1.75rem;
+    color: rgb(254, 241, 223);
   }
   ol {
-    color: white;
-    font-size: 18px;
+    color: color: rgb(254, 241, 223);
+    font-size: 1.25rem;
   }
-  button {
-    background-color: rgb(235, 228, 170);
-    color: black;
-    text-align: center;
-    padding: 15px 32px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+ 
 </style>
