@@ -1,5 +1,5 @@
 ---
-import '@fontsource/great-vibes';
+import "@fontsource/great-vibes";
 interface Props {
   title: string;
 }
@@ -8,34 +8,34 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
-    <meta name='viewport' content='width=device-width,initial-scale=1.0' />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-    <meta name='generator' content={Astro.generator} />
-    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title}</title>
   </head>
   <body>
-    <div class='navbar'>
-      <div class='navbar_logo' height:100%; width:100px;'>
-        <a href='/'>
-          <img class='navbar_logo_image' src='logo.png' />
+    <div class="navbar">
+      <div class="navbar_logo" height:100%; width:100px;'>
+        <a href="/">
+          <img class="navbar_logo_image" src="logo.png" />
         </a>
       </div>
 
-      <div class='navbar_buttons'>
-        <a class='navbar_button' href='/about'>O nas</a>
-        <a class='navbar_button' href='/contact'>Kontakt</a>
-        <a class='navbar_button' href='/oferta'>Oferta</a>
+      <div class="navbar_buttons">
+        <a class="navbar_button" href="/about">O nas</a>
+        <a class="navbar_button" href="/contact">Kontakt</a>
+        <a class="navbar_button" href="/oferta">Oferta</a>
       </div>
     </div>
     <slot />
-    <footer class='footer'>
-      <div class='footer_content'></div>&copy; created with ❤️ by <a
-        href='https://github.com/roxyburdzy'>Roxy</a
+    <footer class="footer">
+      <div class="footer_content"></div>&copy; created with ❤️ by <a
+        href="https://github.com/roxyburdzy">Roxy</a
       >, 2023;
     </footer>
 
@@ -57,7 +57,7 @@ const { title } = Astro.props;
       }
 
       html {
-        font-family: system-ui, sans-serif;
+        font-family: Great Vibes;
         background: #000;
         background-size: 224px;
         box-sizing: border-box;
@@ -68,6 +68,7 @@ const { title } = Astro.props;
       }
       code {
         font-family:
+          Great Vibes,
           Menlo,
           Monaco,
           Lucida Console,
@@ -110,7 +111,6 @@ const { title } = Astro.props;
         height: 100%;
         display: flex;
         justify-content: space-evenly;
-        font-family: Arial, sans-serif;
       }
       .navbar_button {
         font-size: 40px;
@@ -118,7 +118,6 @@ const { title } = Astro.props;
         color: white;
         line-height: 60px;
         margin: 0 15px;
-        font-family: 'Great Vibes';
       }
     </style>
   </body>
