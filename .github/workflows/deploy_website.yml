@@ -19,7 +19,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ROLE }}
           aws-region: eu-central-1
-          audience: sts.amazonaws.com.com
+          audience: sts.amazonaws.com
       - name: Install modules
         run: npm ci
       - name: Build application
