@@ -7,6 +7,9 @@ on:
 
 jobs:
   deploy:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,6 +19,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ROLE }}
           aws-region: eu-central-1
+          audience: sts.amazonaws.com.com
       - name: Install modules
         run: npm ci
       - name: Build application
