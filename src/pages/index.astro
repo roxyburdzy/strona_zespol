@@ -2,12 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import "@fontsource/great-vibes";
 import HeroImage from "../layouts/HeroImage.astro";
+import image from "../assets/main_photo.jpg"
 ---
 
 <Layout title="Homepage.">
   <main>
     <HeroImage
-      src="main_photo.jpg"
+      src={image}
       alt="Zespół Astro"
       title="Harmony Quartet"
     />

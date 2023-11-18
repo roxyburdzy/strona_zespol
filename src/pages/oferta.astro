@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import "@fontsource/great-vibes";
 import HeroImage from "../layouts/HeroImage.astro";
 import Text from "../layouts/Text.astro";
+import ExpandingList from "../components/ExpandingList.astro";
+import image from "../assets/background_oferta.jpeg"
 ---
 
 <Layout title="Oferta">
@@ -10,9 +12,9 @@ import Text from "../layouts/Text.astro";
   
   <main>
     <HeroImage
-  src="background_oferta.jpeg"
-  alt="rosa"
-  title="Nasza oferta na uroczystości"
+      src={image}
+      alt="rosa"
+      title="Nasza oferta na uroczystości"
   />
     
     <Text>
@@ -31,7 +33,7 @@ import Text from "../layouts/Text.astro";
     <br />
     <Text>Nasze propozycje na różne okazje:</Text>
     <ul>
-      <li>Ślub (kościelny, cywilny, humanistyczny)</li>
+      <ExpandingList title="Ślub (kościelny, cywilny, humanistyczny)" list={["Ave","Titanic","Majteczki w kropeczki"]}/>
       <li>Uroczysty obiad</li>
       <li>Rocznica</li>
       <li>Jubilesz</li>
@@ -44,8 +46,6 @@ import Text from "../layouts/Text.astro";
 
 <style>
   main {
-  
-    
     width: 100vw;
     color: rgb(254, 241, 223);
     font-size: 1.25rem;
@@ -53,12 +53,10 @@ import Text from "../layouts/Text.astro";
     display: block;
   }
   
-  
   ul {
     font-size: 1.75rem;
     color: rgb(254, 241, 223);
     letter-spacing: 1px;
-   
   }
   li{
     line-height: 4rem;

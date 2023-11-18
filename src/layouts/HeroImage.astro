@@ -1,6 +1,7 @@
 ---
+import { Image } from "astro:assets";
 interface Props {
-  src: string;
+  src: ImageMetadata;
   alt: string;
   title: string;
 }
@@ -10,7 +11,12 @@ const { src, alt, title } = Astro.props;
 
 <div class="hero">
   <h1 class="hero_title">{title}</h1>
-  <img class="main_photo" src={src} alt={alt} />
+  <Image
+    class="main_photo"
+    src={src}
+    alt={alt}
+    widths={[240, 540, 720, 1600, 2400, 3600]}
+  />,
 </div>
 
 <style>

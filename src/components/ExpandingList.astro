@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  list: string[];
+}
+
+const { title, list } = Astro.props;
+// ["Ave Maria", "Pachelbiec", "Titanic"] ----> <li>Ave Maria</li> <li>Pachelbiec</li> <li>Titanic</li>
+---
+
+<div class="expanding_list">
+  <h2 id="expanding_list_tittle" class="expanding_list_tittle">
+    {title}
+  </h2>
+  <div id="expanding_list_body" class="expanding_list_body hidden">
+    <ul>
+      {
+        list.map(function (string) {
+          return <li>{string}</li>;
+        })
+      }
+    </ul>
+  </div>
+</div>
+<style>
+  .expanding_list_tittle {
+    cursor: pointer;
+  }
+  .hidden {
+    max-height: 0 !important;
+    transition: max-height 0.2s;
+  }
+  .expanding_list_body {
+    max-height: 400px;
+    height: auto;
+    transition: max-height 2s;
+    overflow: hidden;
+  }
+</style>
+<script>
+  //znjadz h2
+  //dodaj eventlistenet do h2
+  //ogarnij animacje
+
+  const title = document.querySelector("#expanding_list_tittle");
+  const body = document.querySelector("#expanding_list_body");
+  title.addEventListener("click", function () {
+    if (body.classList.contains("hidden")) {
+      body.classList.remove("hidden");
+    } else {
+      body.classList.add("hidden");
+    }
+  });
+</script>

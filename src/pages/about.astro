@@ -3,15 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import "@fontsource/great-vibes";
 import HeroImage from "../layouts/HeroImage.astro";
 import Text from "../layouts/Text.astro";
+import image from "../assets/grass_background.jpeg";
 ---
 
 <Layout title="About">
   <main>
-    <HeroImage
-      src="grass_background.jpeg"
-      alt="trawa"
-      title="Piękno tkwi w harmonii"
-    />
+    <HeroImage src={image} alt="trawa" title="Piękno tkwi w harmonii" />
 
     <Text>
       Muzyka jest jednym z najpiękniejszych wyrazów sztuki, zdolnym do wywołania
@@ -42,5 +39,8 @@ import Text from "../layouts/Text.astro";
     position: relative;
     display: block;
     padding: 2rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 8vw;
   }
 </style>

@@ -41,6 +41,7 @@ const { title } = Astro.props;
 
     <style is:global>
       :root {
+        font-family: Great Vibes;
         --accent: 136, 58, 234;
         --accent-light: 224, 204, 250;
         --accent-dark: 49, 10, 101;
@@ -57,13 +58,13 @@ const { title } = Astro.props;
       }
 
       html {
-        font-family: Great Vibes;
         background: #000;
         background-size: 224px;
         box-sizing: border-box;
         font-size: 16px;
         @media only screen and (max-width: 600px) {
-          font-size: 8px;
+          font-size: 12px;
+          letter-spacing: 1, 5px;
         }
       }
       body {
