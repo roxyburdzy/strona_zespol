@@ -16,7 +16,7 @@ const { src, alt, title } = Astro.props;
     src={src}
     alt={alt}
     widths={[240, 540, 720, 1600, 2400, 3600]}
-  />,
+  />
 </div>
 
 <style>
@@ -27,9 +27,6 @@ const { src, alt, title } = Astro.props;
   }
   .hero_title {
     font-size: 10vw;
-    @media only screen and (max-width: 600px) {
-      font-size: 8vw;
-    }
     font-weight: 600;
     line-height: 1;
     text-align: center;
@@ -42,6 +39,10 @@ const { src, alt, title } = Astro.props;
     text-shadow: 5px 5px 10px black;
     letter-spacing: 3px;
     opacity: 0.9;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 8vw;
+    }
   }
   .hero {
     width: 100%;
