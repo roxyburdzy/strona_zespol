@@ -116,6 +116,12 @@ const { title } = Astro.props;
         padding: 0.2rem;
         display: inline-block;
         height: 100%;
+        overflow: hidden;
+
+        @media only screen and (max-width: 333px) {
+          display: none;
+          visibility: hidden;
+        }
       }
       .navbar_logo_image {
         height: 100%;
@@ -127,11 +133,20 @@ const { title } = Astro.props;
         padding-top: 5px;
       }
       .navbar_button {
-        font-size: 2.5rem;
+        font-size: 2rem;
         z-index: 11;
         color: white;
         text-decoration: none;
-        padding: 1rem;
+        padding: 0 1rem;
+        display: inline-block;
+
+        @media only screen and (max-width: 600px) {
+          padding-top: 1rem;
+        }
+        @media only screen and (max-width: 416px) {
+          font-size: 1.5rem;
+          margin-top: 0.5rem;
+        }
       }
     </style>
   </body>
