@@ -21,21 +21,22 @@ const { title } = Astro.props;
   <body>
     <div class="navbar">
       <div class="navbar_logo" height:100%; width:100px;'>
-        <a href="/">
+        <a href="/" data-astro-prefetch>
           <img class="navbar_logo_image" src="logo.png" />
         </a>
       </div>
 
       <div class="navbar_buttons">
-        <a class="navbar_button" href="/about">O nas</a>
-        <a class="navbar_button" href="/oferta">Oferta</a>
-        <a class="navbar_button" href="/contact">Kontakt</a>
+        <a class="navbar_button" href="/about" data-astro-prefetch>O nas</a>
+        <a class="navbar_button" href="/oferta" data-astro-prefetch>Oferta</a>
+        <a class="navbar_button" href="/contact" data-astro-prefetch>Kontakt</a>
       </div>
     </div>
     <slot />
     <footer class="footer">
       <div class="footer_content"></div>&copy; created with ❤️ by <a
-        href="https://github.com/roxyburdzy">Roxy</a
+        href="https://github.com/roxyburdzy"
+        data-astro-prefetch>Roxy</a
       >, 2023;
     </footer>
 
